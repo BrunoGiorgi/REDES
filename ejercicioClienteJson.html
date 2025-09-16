@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Cliente JSON</title>
+</head>
+<body>
+    <h1>Datos de Clientes (desde JSON)</h1>
+    <pre id="contenido"></pre>
+
+    <script>
+        // Cargar el archivo JSON y mostrarlo
+        fetch('Clientes.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('contenido').textContent = JSON.stringify(data, null, 4);
+            })
+            .catch(error => {
+                document.getElementById('contenido').textContent = "Error al cargar el archivo JSON.";
+                console.error(error);
+            });
+    </script>
+</body>
+</html>

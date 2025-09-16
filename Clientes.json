@@ -1,0 +1,36 @@
+{
+    "parametros": {
+        "condicionesIVA": {
+            "IVA_21": 21,
+            "REDUCIDO_105": 10.5,
+            "AUMENTADO_27": 27,
+            "EXENTO_0": 0
+        }
+    },
+    "clientes": [
+        {
+            "codCliente": "0001",
+            "razonSocial": "Umbrella corporation S.A.",
+            "cuit": "30-11111111-8",
+            "condicionIVA": "IVA_21",
+            "fechaDeInicioActividades": "01/05/2000",
+            "saldoCuentaCorriente": 30.75,
+            "ultimoBalance": {
+                "ruta": "/documentos/balances/",
+                "nombreArchivo": "0001_balance2024.pdf"
+            }
+        },
+        {
+            "codCliente": "0002",
+            "razonSocial": "Cooperativa Los Pollos Hermanos",
+            "cuit": "30-22222222-9",
+            "condicionIVA": "EXENTO_0",
+            "fechaDeInicioActividades": "05/06/1990",
+            "saldoCuentaCorriente": 0,
+            "ultimoBalance": {
+                "ruta": "/documentos/balances/",
+                "nombreArchivo": "0002_balance2024.pdf"
+            }
+        }
+    ]
+}
