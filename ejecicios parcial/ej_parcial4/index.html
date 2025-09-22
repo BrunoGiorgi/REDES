@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ej4 - Tabla + Form (Modal)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>Maestro de Clientes (Ej4)</h1>
+      <div class="buttons">
+        <button id="btnCargar">Cargar datos</button>
+        <button id="btnVaciar">Vaciar datos</button>
+        <button id="btnForm">Cargar el form</button>
+      </div>
+    </header>
+
+    <section class="table-area">
+      <div class="table-scroll">
+        <table id="tabla">
+          <thead>
+            <tr>
+              <th>Código</th><th>Razón Social</th><th>CUIT</th><th>Cond. IVA</th><th>Fecha Inicio</th><th>Saldo</th><th>Balance</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="foot">Ejercicio 4 — Tabla con formulario modal</footer>
+  </div>
+
+  <!-- Overlay / Modal -->
+  <div id="overlay" class="overlay" aria-hidden="true">
+    <div class="modal">
+      <button id="closeModal" class="close">✖</button>
+      <h2>Formulario - Alta Cliente</h2>
+      <form id="formModal">
+        <label>Código</label><input id="codCliente" required>
+        <label>Razón Social</label><input id="razonSocial" required>
+        <label>CUIT</label><input id="cuit" required>
+        <label>Condición IVA</label><select id="condicionIVA"></select>
+        <label>Fecha Inicio</label><input id="fechaInicio" type="date" required>
+        <label>Saldo</label><input id="saldo" type="number" step="0.01">
+        <label>Ultimo Balance</label><input id="ultimoBalance" placeholder="archivo.pdf">
+        <div style="margin-top:12px"><button type="submit">Guardar</button></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

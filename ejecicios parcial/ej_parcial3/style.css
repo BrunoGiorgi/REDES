@@ -1,0 +1,7 @@
+body, html{margin:0; height:100%; font-family:Arial}
+.container-global{padding:18px; background:#4fc3f7; min-height:100vh; transition: all 0.3s;}
+.container-global.inactive{opacity:0.3; pointer-events:none;}
+.overlay{position:fixed;inset:0;display:none;justify-content:center;align-items:center;background:rgba(0,0,0,0.55);}
+.overlay[aria-hidden="false"]{display:flex;}
+.modal{background:#fff;padding:18px;border-radius:10px;width:90%;max-width:640px;max-height:85vh;overflow:auto;position:relative;}
+.modal .close{position:absolute;top:10px;right:14px;}

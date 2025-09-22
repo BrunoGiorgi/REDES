@@ -1,0 +1,52 @@
+:root{
+    --primary:#0b5394;
+    --muted:#f2f5f8;
+    --card:#ffffff;
+    --text:#222;
+    --bg-yellow:#fff9c4;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--text);background:var(--bg-yellow)}
+.app{display:flex;flex-direction:column;height:100vh}
+.app-header, .app-footer{
+    background:#d3d3d3;
+    color:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+.app-header{height:10%}
+.app-footer{height:10%}
+.app-header h1, .app-footer small{text-align:center;margin:0}
+
+.app-main{
+    flex:1;
+    display:grid;
+    grid-template-columns:1fr 360px;
+    gap:18px;
+    padding:18px;
+    overflow:hidden;
+}
+.form-section, .preview-section{
+    background:var(--card);
+    padding:16px;
+    border-radius:8px;
+    box-shadow:0 6px 14px rgba(11,83,148,0.06);
+    overflow:auto;
+}
+.row{display:flex;flex-direction:column;margin-bottom:10px}
+.row label{font-weight:600;margin-bottom:6px;font-size:0.9rem}
+.row input, .row select{padding:10px;border:1px solid #d6dde6;border-radius:6px;font-size:0.95rem}
+.actions{display:flex;gap:8px;justify-content:flex-start;margin-top:8px}
+.actions button{padding:10px 14px;border-radius:6px;border:none;background:var(--primary);color:#fff;cursor:pointer}
+.preview-list{font-size:0.95rem}
+.client-item{padding:8px;border-bottom:1px solid #eef3f9}
+.key{font-weight:700}
+
+/* Responsive: una sola columna si achica viewport */
+@media (max-width:900px){
+    .app-main{
+        grid-template-columns:1fr;
+    }
+}

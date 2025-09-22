@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ej3 - Modal con Contenedor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container-global" id="containerGlobal">
+    <h1><b>Esto es un div contenedor</b></h1>
+    <button id="btnOpenModal">Abre el div modal</button>
+
+    <div class="help-text">
+      <b>Ayudas para el ejercicio</b>
+      <p>El div contenedor deberá ser desactivado cuando se active la ventana modal</p>
+      <p>desactivar el contenedor podría ser darle transparencia y deshabilitar todos los botones.</p>
+      <p>desactivado:</p>
+      <p>pointer-events: none</p>
+      <p>opacity:0.3</p>
+      <p>Activado:</p>
+      <p>pointer-events: auto</p>
+      <p>opacity:1</p>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="overlay" class="overlay" aria-hidden="true">
+    <div class="modal">
+      <button class="close" id="btnCerrar">✖</button>
+      <h2>Formulario dentro de la modal</h2>
+      <form id="modalForm">
+        <!-- contenido del Ejercicio 1 aquí -->
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

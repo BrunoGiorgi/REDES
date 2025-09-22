@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ej2 - Tabla Maestro de Clientes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="panel">
+    <header class="panel-header">
+      <h1>Clientes</h1>
+      <div class="controls">
+        <button id="btnCargar">Cargar datos</button>
+        <button id="btnVaciar">Vaciar datos</button>
+      </div>
+    </header>
+
+    <div class="table-wrapper">
+      <table class="data-table" aria-label="Maestro de Clientes">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Razón Social</th>
+            <th>CUIT</th>
+            <th>Cond. IVA</th>
+            <th>Fecha Inicio</th>
+            <th>Saldo</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+        <tfoot id="tfoot">
+          <tr>
+            <td>Sum Código</td>
+            <td>Sum Razón</td>
+            <td>Sum CUIT</td>
+            <td>Sum IVA</td>
+            <td>Sum Fecha</td>
+            <td>Sum Saldo</td>
+            <td>Sum Balance</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <footer class="panel-footer"><b>Pie</b></footer>
+  </div>
+</body>
+</html>
