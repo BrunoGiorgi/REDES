@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ej1 - Formulario Maestro de Clientes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <h1>Formulario para ALTA Maestro de Clientes</h1>
+        </header>
+
+        <main class="app-main">
+            <section class="form-section">
+                <form id="clienteForm" novalidate>
+                    <div class="row">
+                        <label for="codCliente">Código Cliente</label>
+                        <input id="codCliente" name="codCliente" required placeholder="Ej: C0004">
+                    </div>
+
+                    <div class="row">
+                        <label for="razonSocial">Razón Social</label>
+                        <input id="razonSocial" name="razonSocial" required placeholder="Nombre / Razón social">
+                    </div>
+
+                    <div class="row">
+                        <label for="cuit">CUIT</label>
+                        <input id="cuit" name="cuit" required placeholder="30-XXXXXXXX-X">
+                    </div>
+
+                    <div class="row">
+                        <label for="condicionIVA">Condición IVA</label>
+                        <select id="condicionIVA" name="condicionIVA" required>
+                            <option value="">-- Seleccione --</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <label for="fechaInicio">Fecha de Inicio</label>
+                        <input id="fechaInicio" name="fechaInicio" type="date" required>
+                    </div>
+
+                    <div class="row">
+                        <label for="saldo">Saldo Cuenta Corriente</label>
+                        <input id="saldo" name="saldo" type="number" step="0.01" placeholder="0.00">
+                    </div>
+
+                    <div class="row">
+                        <label for="ultimoBalance">Último Balance</label>
+                        <input id="ultimoBalance" name="ultimoBalance" placeholder="balance_CXXXX_YYYY-MM-DD.pdf">
+                    </div>
+
+                    <div class="actions">
+                        <button id="btnEnviar" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </section>
+
+            <aside class="preview-section" aria-live="polite">
+                <h2>Clientes (previsualización)</h2>
+                <div id="clientesPreview" class="preview-list">
+                </div>
+            </aside>
+        </main>
+
+        <footer class="app-footer">
+            <small>Pie del formulario</small>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
